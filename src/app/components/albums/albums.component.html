@@ -1,12 +1,8 @@
-<div  *ngFor='let album of albumList;let i=index'>
-    <div [ngClass]="'Album'+(i+1)">
-            <mat-card class="photo" *ngFor='let image of album'>
-                    <mat-card-header>
-                      <div mat-card-avatar class="example-header-image"></div>
-                      <mat-card-title>{{image.title}}</mat-card-title>
-                    </mat-card-header>
-                    <img mat-card-image [src]="image.url" [alt]="image.title">
-                </mat-card>
+<div *ngFor='let album of albumList;let i=index'>
+  <div [ngClass]="'album album'+(i+1)">
+    <div class="photo" *ngFor='let image of album'>
+      <div>{{image.title}}</div>
+      <img [src]="image.url" [alt]="image.title">
     </div>
-    
+  </div>
 </div>
