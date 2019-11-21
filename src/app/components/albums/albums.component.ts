@@ -31,29 +31,14 @@ export class AlbumsComponent implements OnInit {
         this.albums[photosArr[i]['albumId']].push(photosArr[i]);
       }
 
-      let counterPhotos=2,keys=Object.keys(this.albums);
+      let keys=Object.keys(this.albums);
       for(let i=0;i<keys.length;i++){
         let photosArr= this.albums[keys[i]];
         photosArr.sort(function(a, b) { 
             return b.id - a.id;
         });
         this.albumList.push(photosArr.slice(0,2))
-        // for(let i=0;i<photosArr.length;i++){
-        //   if(!this.albums[photosArr[i]['albumId']]){
-        //     if(counter==0)
-        //       break;
-        //     counter--;
-        //     this.albums[photosArr[i]['albumId']]=[];
-        //   }
-        //   this.albums[photosArr[i]['albumId']].push(photosArr[i]);
-        // }
       }
-
-      // albums.sort(function(a, b) { 
-      //     return b.speed - a.speed;
-      // });
-      // this.albums=albums.slice(0,3);
-      console.log(this.albumList)
     })
   }
 }
