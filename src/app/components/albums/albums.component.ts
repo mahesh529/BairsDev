@@ -40,7 +40,7 @@ export class AlbumsComponent implements OnInit {
         albumsList.push(photosArr.slice(0,2))
       }
       this.albumList=albumsList.reverse();
-
+      console.log(this.albumList)
     })
   }
 }
